@@ -1,0 +1,322 @@
+@import url(styles.css);
+
+/* Hero section */
+.home-hero {
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    height: 65vh;
+    min-height: fit-content;
+    letter-spacing: 1px;
+    position: relative;
+    padding-top: 10vh;
+}
+.home-hero::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: .3;
+    background: var(--highlight-color);
+    filter: blur(60vh);
+    z-index: -1;
+}
+
+.home-hero picture {
+    position: relative;
+    display: inline-block;
+    animation: float 3s ease-in-out infinite alternate;
+}
+
+.home-hero picture img {
+    width: 320px;
+    height: 320px;
+}
+
+/* Efeito glow estático desfocado atrás da imagem */
+.home-hero picture::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    height: 100%;
+    background: var(--primary-color);
+    filter: blur(60px);
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    z-index: -1;
+}
+
+/* Efeito glow com efeito átomo */
+.home-hero picture::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 50%;
+    height: 100%;
+    border-radius: 50%;
+    filter: blur(60px);
+    background: conic-gradient(#f57b03, #fa8d20);
+    transform: translate(-50%, -50%) rotate(0deg);
+    z-index: -1;
+    animation: spin 4s linear infinite;
+}
+
+/* Efeito giratório */
+@keyframes spin {
+    0% {
+        transform: translate(-50%, -50%) rotate(0deg);
+    }
+
+    100% {
+        transform: translate(-50%, -50%) rotate(360deg);
+    }
+}
+
+/* Imagem flutuando */
+@keyframes float {
+    0% {
+        transform: translateY(0px);
+    }
+
+    50% {
+        transform: translateY(-10px);
+    }
+
+    100% {
+        transform: translateY(0px);
+    }
+}
+
+.home-hero .introduction_text h1 {
+    font-size: 3rem;
+    margin-bottom: 10px;
+    font-weight: 700;
+    color: var(--text-color);
+
+
+}
+
+.span_highlight {
+    color: var(--primary-color);
+    font-weight: 900;
+}
+
+.home-hero .introduction_text p {
+    max-width: 600px;
+    font-size: 1.4rem;
+    margin-bottom: 20px;
+    line-height: 1.2;
+}
+
+.qta_and_btn {
+    display: flex;
+    justify-content: start;
+    align-items: start;
+    gap: 22px;
+}
+
+.qta_call_to_connect {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.qta_call_to_connect span {
+    font-size: 1.4rem;
+    background-color: #f5f5f5;
+    width: fit-content;
+    padding: 8px 12px;
+    font-weight: 700;
+    border-radius: 12px;
+    color: var(--bg-color);
+    user-select: none;
+}
+
+.contact_links {
+    display: flex;
+    width: 100%;
+    gap: 12px;
+    padding-left: 8px;
+
+}
+
+.btn_download_cv {
+    width: fit-content;
+    padding: 8px 12px;
+    font-size: 1.4rem;
+    border: none;
+    font-weight: 700;
+    color: #fff;
+    border-radius: 12px;
+    background-color: var(--primary-color);
+    cursor: pointer;
+}
+
+.span_typing {
+    position: relative;
+    color: var(--highlight-color);
+    display: inline-block;
+    min-width: 1px;
+    min-height: 1em;
+}
+
+.span_typing::after {
+    content: "";
+    display: inline-block;
+    width: 2px;
+    height: 1em;
+    background: var(--primary-color);
+    margin-left: 2px;
+    vertical-align: bottom;
+    animation: blink 1s steps(1) infinite;
+}
+
+@keyframes blink {
+    50% {
+        opacity: 0;
+    }
+}
+
+/* About me */
+.about_me {
+    padding: 40px 0;
+    display: flex;
+    position: relative;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #f7f7f7;
+    margin-bottom: 120px;
+}
+
+.about_me_text{
+    flex: 1;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+}
+
+.about_me h1 {
+    font-size: 3rem;
+    padding: 12px 0;
+    font-weight: 900;
+    color: var(--primary-color);
+    border-bottom: 2px solid var(--primary-color);
+    margin-bottom: 12px;
+}
+
+.about_me p {
+    font-size: 1.3rem;
+    color: var(--bg-color);
+}
+
+.about_me picture{
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    position: relative;
+}
+
+.about_me picture img{
+    width: 500px;
+    height: 500px;
+    border-radius: 12px;
+    object-fit: cover;
+    position: absolute;
+    top: -100px;
+    box-shadow: 4px 4px 12px rgba(0, 0, 0, 0.219);
+}
+
+/* Media queries */
+
+/* -------- até 1200px -------- */
+@media (max-width: 1200px) {
+
+    /* HERO */
+    .home-hero {
+        flex-direction: column-reverse;
+        align-items: center;
+        padding: 5vh 5vw;
+    }
+
+    .home-hero picture {
+        margin-bottom: 20px;
+    }
+    .home-hero picture img{
+        width: 250px;
+        height: auto;
+    }
+
+
+    .home-hero .introduction_text {
+        display: flex;
+        flex-direction: column;
+    }
+
+    /* ABOUT */
+    .about_me .container {
+        flex-direction: column;  /* coloca em coluna */
+        align-items: center;     /* centraliza */
+        text-align: center;
+        gap: 20px;
+    }
+
+    .about_me picture {
+        position: relative;
+    }
+
+    .about_me picture img {
+        position: relative; /* volta pro fluxo normal */
+        top: auto;
+        width: 600px;
+        height: 400px;
+        margin-bottom: 20px;
+    }
+
+    .about_me_text {
+        max-width: 700px;
+    }
+}
+
+/* -------- até 768px -------- */
+@media (max-width: 768px) {
+
+    /* HERO */
+    .home-hero picture img {
+        width: 220px;
+        height: 220px;
+    }
+
+    /* ABOUT */
+    .about_me picture img {
+        width: 340px;
+        height: 280px;
+    }
+
+    .home-hero .introduction_text h1,
+    .about_me h1 {
+        font-size: 2.2rem;
+    }
+
+    .home-hero .introduction_text p,
+    .about_me p {
+        font-size: 1.1rem;
+    }
+}
+
+@media (max-width: 468px){
+
+    
+    .home-hero{
+        min-height: fit-content;
+        padding-bottom: 26px;
+    }
+    .qta_and_btn{
+        flex-direction: column;
+    }
+}
+
