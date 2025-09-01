@@ -97,8 +97,6 @@
     margin-bottom: 10px;
     font-weight: 700;
     color: var(--text-color);
-
-
 }
 
 .span_highlight {
@@ -144,7 +142,16 @@
     padding-left: 8px;
 
 }
-
+.contact_links a img {
+  transition: transform 0.25s ease, filter 0.25s ease, box-shadow 0.25s ease;
+  display: block;
+}
+.contact_links a:hover img,
+.contact_links a img:hover,
+.btn_download_cv:hover {
+  transform: translateY(-2px) scale(1.03);
+  filter: drop-shadow(0 0 12px rgba(247,121,2,0.65));
+}
 .btn_download_cv {
     width: fit-content;
     padding: 8px 12px;
@@ -155,6 +162,7 @@
     border-radius: 12px;
     background-color: var(--primary-color);
     cursor: pointer;
+    transition: transform 0.25s ease, filter 0.25s ease, box-shadow 0.25s ease;
 }
 
 .span_typing {
