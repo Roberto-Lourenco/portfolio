@@ -1,0 +1,120 @@
+@import url(styles.css);
+
+/* Contact Card */
+.contact-card {
+    display: flex;
+    flex-wrap: wrap;
+    background-color: rgba(255,255,255,0.05);
+    border-radius: 15px;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.3);
+    color: var(--text-color);
+    overflow: hidden;
+    margin: 80px auto;
+}
+
+.form-section, .info-section {
+    flex: 1 1 400px;
+    padding: 40px;
+}
+
+.form-section {
+    background-color: rgba(255,255,255,0.05);
+}
+
+.info-section {
+    background-color: rgba(255,255,255,0.03);
+}
+
+/* Titles */
+.title {
+    font-size: 2rem;
+    font-weight: 600;
+    color: var(--text-color);
+    margin-bottom: 10px;
+}
+
+.subtitle {
+    font-size: 0.95rem;
+    color: rgba(255,255,255,0.7);
+    margin-bottom: 25px;
+}
+
+/* Form Inputs */
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group input[type="text"], input[type="email"], textarea {
+    width: 100%;
+    padding: 12px;
+    border: none;
+    border-radius: 6px;
+    background: rgba(255,255,255,0.1);
+    color: var(--text-color);
+    font-size: 1rem;
+    outline: none;
+    transition: box-shadow 0.3s, border 0.3s;
+}
+
+.form-group input:focus, textarea:focus {
+    box-shadow: 0 0 8px var(--highlight-color);
+    border: 1px solid var(--highlight-color);
+}
+
+.form-group textarea {
+    resize: vertical;
+    min-height: 100px;
+}
+
+/* Botão */
+.form-section button {
+    background: var(--highlight-color);
+    color: var(--text-color);
+    font-size: 1.1rem;
+    padding: 8px 25px;
+    border: none;
+    border-radius: 6px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background 0.3s, transform 0.2s;
+}
+
+.form-section button:hover {
+    background: var(--primary-color);
+    transform: translateY(-2px);
+}
+
+/* Info Section */
+.info-item {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 20px;
+}
+
+.info-item i {
+    font-size: 18px;
+    color: var(--highlight-color);
+    margin-right: 15px;
+}
+
+.info-item .label {
+    font-weight: 500;
+    display: block;
+}
+
+/* Links */
+.info-item a {
+    color: var(--primary-color);
+    text-decoration: none;
+}
+
+.info-item a:hover {
+    color: var(--highlight-color);
+}
+
+/* Responsividade */
+@media(max-width: 900px){
+    .contact-card {
+        flex-direction: column;
+    }
+}

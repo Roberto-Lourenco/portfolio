@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Portfólio Acadêmico de Roberto Lourenço, projetos e experiências.">
+    <meta name="author" content="Roberto">
+    <title>Contato | Roberto Lourenço</title>
+    <link rel="stylesheet" href="assets/css/contato.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css" integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+    <header id="header_top">
+        <div class="logo">
+            <img src="assets/img/avatarperfilgemini.png" alt="Avatar com a foto cartoonizada de Roberto Lourenço">
+            <div class="text-logo">
+                <h3>Roberto Lourenço</h3>
+                <p>Desenvolvedor</p>
+            </div>
+        </div>
+        <!-- Menu desktop -->
+        <nav id="nav_top">
+            <ul>
+                <li><a href="index.html">Sobre mim</a></li>
+                <li><a href="academico.html">Acadêmico</a></li>
+                <li><a href="portfolio.html">Portfólio</a></li>
+                <li><a href="contato.html" class="active">Contato</a></li>
+            </ul>
+        </nav>
+
+        <!-- Botão hamburger -->
+        <button class="nav-toggle" aria-label="Abrir menu" aria-expanded="false" aria-controls="mobile-menu">
+            <span class="hamburger" aria-hidden="true"></span>
+        </button>
+
+        <!-- Menu mobile -->
+        <nav id="mobile-menu" class="mobile-nav" aria-hidden="true">
+            <ul>
+                <li><a href="index.html">Sobre mim</a></li>
+                <li><a href="academico.html">Acadêmico</a></li>
+                <li><a href="portfolio.html">Portfólio</a></li>
+                <li><a href="contato.html" class="active">Contato</a></li>
+            </ul>
+        </nav>
+
+    </header>
+
+    <main class="contact">
+        <section class="contact-card container">
+            <!-- Formulário -->
+            <div class="form-section">
+                <h2 class="title">Entre em Contato</h2>
+                <p class="subtitle">Fique à vontade para enviar uma mensagem.</p>
+                <form action="#" method="POST">
+                    <div class="form-group">
+                        <input type="text" name="name" placeholder="Nome" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" name="email" placeholder="Email" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="text" name="subject" placeholder="Assunto">
+                    </div>
+                    <div class="form-group">
+                        <textarea name="message" placeholder="Mensagem" rows="5" required></textarea>
+                    </div>
+                    <button type="submit" class="btn-submit">Enviar</button>
+                </form>
+            </div>
+
+            <!-- Informações de Contato -->
+            <div class="info-section">
+                <h2 class="title">Informações de Contato</h2>
+                <p class="subtitle">Estou disponível para dúvidas, sugestões ou parcerias.</p>
+
+                <div class="info-item">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <p>
+                        <span class="label">Endereço:</span> Duque de Caxias, RJ, Brasil
+                    </p>
+                </div>
+
+                <div class="info-item">
+                    <i class="fas fa-paper-plane"></i>
+                    <p>
+                        <span class="label">Email:</span> <a href="mailto:">robertolourenco4397@gmail.com</a>
+                    </p>
+                </div>
+
+                <div class="info-item">
+                    <i class="fab fa-linkedin"></i>
+                    <p>
+                        <span class="label">LinkedIn:</span> <a target="_blank" href="https://www.linkedin.com/in/roberto-lourenco-jr/">linkedin.com/in/roberto-lourenco-jr</a>
+                    </p>
+                </div>
+
+                <div class="info-item">
+                    <i class="fab fa-github"></i>
+                    <p>
+                        <span class="label">GitHub:</span> <a target="_blank" href="https://github.com/Roberto-Lourenco">github.com/Roberto-Lourenco</a>
+                    </p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+
+    <footer class="footer">
+        <section class="footer_content">
+            <div class="name_and_job">
+                <h2>Roberto Lourenço</h2>
+                <p>Desenvolvedor de Software</p>
+            </div>
+            <div class="footer_menu">
+                <ul>
+                    <li><a href="index.html">Sobre mim</a></li>
+                    <li><a href="academico.html">Acadêmico</a></li>
+                    <li><a href="portfolio.html">Portfólio</a></li>
+                    <li><a href="contato.html">Contato</a></li>
+                </ul>
+            </div>
+            <div class="footer_socials">
+                <a href=""><img src="assets/img/icons/footer_github.png" alt="Github Logo" width="25px"></a>
+                <a href=""><img src="assets/img/icons/footer_linkedin.png" alt="Linkedin Logo" width="25px"></a>
+            </div>
+        </section>
+        <div class="copyright">
+            <p>© 2025 Desenvolvido por Roberto Lourenço</p>
+        </div>
+    </footer>
+
+    <script src="assets/js/script.js"></script>
+    <script src="assets/js/contato.js"></script>
+
+</body>
+
+</html>

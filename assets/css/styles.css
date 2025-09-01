@@ -231,7 +231,7 @@ ul li{
   height: 200px;
   pointer-events: none; 
   border-radius: 50%;
-  background: rgb(63, 26, 175); 
+  background: rgba(63, 26, 175, 0.486); 
   filter: blur(200px);
   transform: translate(-50%, -50%);
   z-index: -1;

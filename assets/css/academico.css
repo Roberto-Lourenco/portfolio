@@ -1,7 +1,7 @@
 @import url(styles.css);
 
 /* =========================
-   Resume Hero Section
+   Resumo acadêmico
 ========================= */
 .resume-hero{
     overflow: hidden;
@@ -117,7 +117,6 @@
   transition: transform 0.3s ease;
 }
 
-/* Conteúdo */
 .academic-content {
   display: none;
   margin-left: 5vw;
@@ -135,40 +134,132 @@
   display: grid;
 }
 
-.academic-item {
-  margin-bottom: 20px;
-  padding: 15px;
-  border-radius: 10px;
-  background: rgba(255,255,255,0.05);
-  box-shadow: 0 4px 10px rgba(0,0,0,0.08);
-  transition: transform .5s ease-in-out;
+.course-card {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    background: #2c2c70;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+    margin-bottom: 20px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    max-height: 300px;
+}
+/* Estabiliza os tamanhos dos lados em diferentes conteudos */
+.course-left, .course-right{
+    width: 50%;
 }
 
-.academic-item:hover{
-  transform: scale(1.05);
+.course-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 28px rgba(0,0,0,0.4);
 }
 
-.academic-item h3 {
-  margin: 0 0 5px 0;
-  font-size: 1.5rem;
-  font-weight: 700;
-  color: var(--primary-color);
+.course-left {
+    background: #1b1b55;
+    padding: 25px;
+    color: var(--text-color);
+    display: flex;
+    height: 100%;
+    flex-direction: column;
+    gap: 12px;
+    max-width: 300px;
 }
-.academic-item .courses-credential{
-  display: inline-block;
-  background: var(--highlight-color);
-  padding: 8px;
-  margin-top: 12px;
-  border-radius: 4px;
-  font-size: 1.1rem;
-  font-weight: 500;
-  color: var(--text-color);
+
+
+.course-label {
+    font-size: 0.9rem;
+    color: var(--highlight-color);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.course-title {
+    font-size: 1.5rem;
+    margin: 10px 0;
+}
+
+.view-credentials {
+    font-size: 0.9rem;
+    color: var(--text-color);
+    text-decoration: none;
+    width: fit-content;
+    padding: 8px;
+    border-radius: 6px;
+    display: inline-block;
+    background: var(--primary-color);
+}
+
+.view-credentials:hover {
+    text-decoration: underline;
+}
+
+.course-right {
+    padding: 25px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.chapter-info {
+    margin-bottom: 20px;
+}
+
+.chapter-label {
+    font-size: 0.85rem;
+    color: #aaa;
+    text-transform: uppercase;
+}
+
+.chapter-title {
+    font-size: 1.3rem;
+    margin: 5px 0;
+}
+
+.chapter-progress {
+    font-size: 0.85rem;
+    color: #ccc;
+}
+
+.continue-btn {
+    align-self: flex-start;
+    padding: 10px 20px;
+    background: var(--highlight-color);
+    color: var(--text-color);
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: 500;
+    transition: background 0.3s, transform 0.2s;
+}
+
+.continue-btn:hover {
+    background: var(--primary-color);
+    transform: translateY(-2px);
 }
 
 @keyframes fadeIn {
   from { opacity: 0; transform: translateY(10px); }
   to { opacity: 1; transform: translateY(0); }
 }
+
+/* Cards */
+@media(max-width: 900px) {
+    .course-card {
+        flex-direction: column;
+        margin: 4px;
+    }
+
+    .course-left, .course-right {
+        flex: 1 1 auto;
+        width: 100%;
+        padding: 15px;
+        max-width: none;
+    }
+}
+
+
 
 /* Responsividade */
 @media (max-width:1200px){
@@ -187,14 +278,6 @@
   }
 }
 
-@media (max-width:768px){
 
-  .academic-item .courses-credential{
-    font-size: 1rem;
-  }
-  .academic-item h3{
-    font-size: 1.2rem;
-  }
-}
 
 
