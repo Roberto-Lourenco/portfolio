@@ -1,7 +1,12 @@
 @import url(styles.css);
 
+/* =========== Seção Resumo acadêmico ===========*/
 /* =========================
-   Resumo acadêmico
+Sumário
+   Diferenciais:
+   - Uma mini hero section resumindo a minha trajetória profissional
+   - Adicionei um efeito glow ao plano de fundo utilizando o ::after para destacar o lado esquerdo, pois estava com pouco conteudo
+   - Usei o position relative para soltar a imagem chapéu e coloca-lo fixado na borda direita-superior
 ========================= */
 .resume-hero{
     overflow: hidden;
@@ -68,12 +73,22 @@
     margin-bottom: 2rem;
 }
 
+/* =========== Seção acadêmica(conteúdo) ===========*/
+/* =========================
+Sumário
+  Diferenciais:
+   - Criei um sub menu interativo, separando Graduação, Curso e Idiomas
+   - Criei um card padrão para usar em todos os itens
+   - Padronizei como a esquerda sendo tipo de curso, instituição e data (Em graduações coloquei status), e a direita o nome do curso.
+   - Utilizei o grid para organizar o layout, com  o repeat(2, 1fr). Quando diminui a tela fica em 1fr por coluna.
+========================= */
 
-
+/* === Container da seção === */
 .academic-section {
   padding: 5vh 20px;
 }
 
+/* === Sub Menu  === */
 .academic-menu ul {
   display: flex;
   gap: 30px;
@@ -117,6 +132,7 @@
   transition: transform 0.3s ease;
 }
 
+/* === Layout dos itens === */
 .academic-content {
   display: none;
   margin-left: 5vw;
@@ -124,16 +140,22 @@
   grid-template-columns: repeat(2, 1fr);
   gap: 20px;
 }
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.academic-content.active {
+  display: grid;
+}
+/* === Titulo do submenu === */
 .academic-content h2{
     margin-bottom: 8px;
     grid-column: 1/-1; /* força o título a ocupar as 2 colunas */
 
 }
 
-.academic-content.active {
-  display: grid;
-}
-
+/* === Cards dos itens === */
 .course-card {
     display: flex;
     justify-content: start;
@@ -150,12 +172,10 @@
 .course-left, .course-right{
     width: 50%;
 }
-
 .course-card:hover {
     transform: translateY(-5px);
     box-shadow: 0 12px 28px rgba(0,0,0,0.4);
 }
-
 .course-left {
     background: #1b1b55;
     padding: 25px;
@@ -166,8 +186,6 @@
     gap: 12px;
     max-width: 300px;
 }
-
-
 .course-label {
     font-size: 0.9rem;
     color: var(--highlight-color);
@@ -179,7 +197,6 @@
     font-size: 1.5rem;
     margin: 10px 0;
 }
-
 .view-credentials {
     font-size: 0.9rem;
     color: var(--text-color);
@@ -190,7 +207,6 @@
     display: inline-block;
     background: var(--primary-color);
 }
-
 .view-credentials:hover {
     text-decoration: underline;
 }
@@ -202,49 +218,8 @@
     justify-content: space-between;
 }
 
-.chapter-info {
-    margin-bottom: 20px;
-}
 
-.chapter-label {
-    font-size: 0.85rem;
-    color: #aaa;
-    text-transform: uppercase;
-}
-
-.chapter-title {
-    font-size: 1.3rem;
-    margin: 5px 0;
-}
-
-.chapter-progress {
-    font-size: 0.85rem;
-    color: #ccc;
-}
-
-.continue-btn {
-    align-self: flex-start;
-    padding: 10px 20px;
-    background: var(--highlight-color);
-    color: var(--text-color);
-    border: none;
-    border-radius: 8px;
-    cursor: pointer;
-    font-weight: 500;
-    transition: background 0.3s, transform 0.2s;
-}
-
-.continue-btn:hover {
-    background: var(--primary-color);
-    transform: translateY(-2px);
-}
-
-@keyframes fadeIn {
-  from { opacity: 0; transform: translateY(10px); }
-  to { opacity: 1; transform: translateY(0); }
-}
-
-/* Cards */
+/* === Responsividade dos cards (Separei para testes, pois estavam dando bug) === */
 @media(max-width: 900px) {
     .course-card {
         flex-direction: column;
@@ -261,7 +236,7 @@
 
 
 
-/* Responsividade */
+/* === Responsividade com ajustes padrões === */
 @media (max-width:1200px){
 
   .resume-content{

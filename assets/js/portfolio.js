@@ -1,3 +1,12 @@
+/*
+  ========== Scripts Projetos & Modal Portfólio ==========
+  Sumário
+    - Objeto com dados dos projetos (título, desc, imagem, link).
+    - Abre o modal ao clicar em um card do portfólio.
+    - Renderiza dinamicamente os dados do projeto no modal.
+    - Fecha o modal ao clicar no botão, fora do modal ou no overlay.
+*/
+
 const projects = {
     omnis: {
         title: "Projeto Omnis",
@@ -39,6 +48,7 @@ closeModal.addEventListener("click", () => {
     modal.style.display = "none";
 });
 
+// Se clicar no overlay (modal) ele seta para display none.
 window.addEventListener("click", e => {
     if (e.target === modal) {
         modal.style.display = "none";

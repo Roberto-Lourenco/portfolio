@@ -13,6 +13,15 @@
 
 /* -------------------------------------------------------------------------- */
 
+/* =========== Portfolio ===========*/
+/* =========================
+Sumário
+   - Layout simples
+   - Modal dinâmico que expande ao clicar no botão Ver Mais
+   - Criei um efeito abaixo do texto principal(H2), apenas para não ficar muito simples
+   - Ainda está em construção
+========================= */
+
 .portfolio {
     padding: 60px 5vw;
     color: var(--text-color);
@@ -23,6 +32,7 @@
     flex-direction: column;
 }
 
+/* === Titulo com efeito ====*/
 .portfolio h2 {
     font-size: 2.5rem;
     margin-bottom: 50px;
@@ -33,7 +43,6 @@
     -webkit-text-fill-color: transparent;
     position: relative;
 }
-
 .portfolio h2::after {
     content: '';
     display: block;
@@ -44,13 +53,12 @@
     border-radius: 2px;
     animation: slide 2s infinite alternate;
 }
-
 @keyframes slide {
     0% { transform: translateX(-20px); }
     100% { transform: translateX(20px); }
 }
 
-
+/* === Cards dos portfólios ====*/
 .portfolio-grid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -104,6 +112,7 @@
     margin-bottom: 10px;
 }
 
+/* === Botão Ver Mais (Abrir modal) ====*/
 .open-modal {
     background: var(--highlight-color);
     color: var(--text-color);
@@ -115,12 +124,11 @@
     cursor: pointer;
     transition: background .3s ease;
 }
-
 .open-modal:hover {
     background: var(--primary-color);
 }
 
-/* Modal */
+/* === Modal - (Nome das classes auto-explicativas) ====*/
 .modal {
     display: none;
     position: fixed;
@@ -131,7 +139,6 @@
     justify-content: center;
     align-items: center;
 }
-
 .modal-content {
     background: #111827;
     border-radius: 12px;
@@ -159,6 +166,7 @@
     margin: 15px 0;
 }
 
+/* Botão para acessar o projeto na integra */
 .modal-btn {
     display: inline-block;
     margin-top: 10px;

@@ -1,6 +1,13 @@
 @import url(styles.css);
 
-/* Contact Card */
+/* =========== Contato ===========*/
+/* =========================
+Sumário
+   Diferenciais:
+   - Formulário de contato com layout unificado entre formas de contato e formulário de contato
+========================= */
+
+/* === Layout padrão para as 2 divisões ===*/
 .contact-card {
     display: flex;
     flex-wrap: wrap;
@@ -12,27 +19,25 @@
     margin: 80px auto;
 }
 
+/* === Formulário ===*/
+/* Layout e cores */
 .form-section, .info-section {
     flex: 1 1 400px;
     padding: 40px;
 }
-
 .form-section {
     background-color: rgba(255,255,255,0.05);
 }
-
 .info-section {
     background-color: rgba(255,255,255,0.03);
 }
-
-/* Titles */
+/* Tipografia do formulario */
 .title {
     font-size: 2rem;
     font-weight: 600;
     color: var(--text-color);
     margin-bottom: 10px;
 }
-
 .subtitle {
     font-size: 0.95rem;
     color: rgba(255,255,255,0.7);
@@ -43,7 +48,6 @@
 .form-group {
     margin-bottom: 20px;
 }
-
 .form-group input[type="text"], input[type="email"], textarea {
     width: 100%;
     padding: 12px;
@@ -55,18 +59,16 @@
     outline: none;
     transition: box-shadow 0.3s, border 0.3s;
 }
-
 .form-group input:focus, textarea:focus {
     box-shadow: 0 0 8px var(--highlight-color);
     border: 1px solid var(--highlight-color);
 }
-
 .form-group textarea {
     resize: vertical;
     min-height: 100px;
 }
 
-/* Botão */
+/* Botão enviar */
 .form-section button {
     background: var(--highlight-color);
     color: var(--text-color);
@@ -84,13 +86,15 @@
     transform: translateY(-2px);
 }
 
-/* Info Section */
+/* === Formas de contato ===*/
+/* Layout */
 .info-item {
     display: flex;
     align-items: flex-start;
     margin-bottom: 20px;
 }
 
+/* Itens */
 .info-item i {
     font-size: 18px;
     color: var(--highlight-color);
@@ -112,7 +116,7 @@
     color: var(--highlight-color);
 }
 
-/* Responsividade */
+/* === Responsividade padrão ===*/
 @media(max-width: 900px){
     .contact-card {
         flex-direction: column;

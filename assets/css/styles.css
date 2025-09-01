@@ -1,3 +1,14 @@
+/* =========== Estilização base do projeto ===========*/
+/* =========================
+Sumário
+   - Contém resets padrões, que eu achei necessário implementar aqui para evitar se repetir (DRY).
+   - Adicionei variaveis de cores padrões, e futuramente irei adicionar variáveis para Tipografia e botões padrões.
+   - A configuração do Header e Footer está nesse arquivo.
+   - Adicionei um efeito glow que muda a cor do background para ser chamado no JS quando o usário move o mouse (event).
+   - Menu mobile (hamburguer) diferenciado.
+   - Em quase todas páginas exceto "Sobre mim", eu adicionei uma logo com o meu nome e foto, similar a "Meu perfil" em websites comuns.
+========================= */
+
 @import url('https://fonts.googleapis.com/css2?family=TASA+Explorer:wght@400..800&display=swap');
 *{
     margin: 0;
@@ -5,6 +16,7 @@
     box-sizing: border-box;
     font-family: "TASA Explorer", sans-serif;
 
+    /* ==== Fix === */
     /* Remove o background azul ao tocar em um item(Versão mobile) */
     input,
     textarea,
@@ -18,9 +30,9 @@
     a:active{
         outline: none;
     }
-
 }
 
+/* ==== Variáveis globais === */
 :root{
     --bg-color: #030c25;
     --primary-color: #FF7518;
@@ -28,22 +40,15 @@
     --darker-color: #B7410E;
     --highlight-color: #FF5F1F;
 }
-body{
-    background-color: var(--bg-color);
-}
 
-h1,h2,h3, h4, h5, p{
-    color: var(--text-color);
-}
+/* ==== Estilização padrão === */
+body{ background-color: var(--bg-color); }
 
-a{
-    text-decoration: none;
-}
+h1,h2,h3, h4, h5, p{ color: var(--text-color); }
 
-ul li{
-    list-style-type: none;
-}
+a{ text-decoration: none; }
 
+ul li{ list-style-type: none; }
 .container {
     width: 100%;
     max-width: 1200px;
@@ -51,7 +56,6 @@ ul li{
     padding: 0 20px;
     display: flex;
 }
-
 ::selection{
     color: var(--text-color);
     background-color: var(--darker-color);
@@ -62,14 +66,14 @@ ul li{
 }
 
 
-/* Nav Bar */
-
+/* ====== Header ===== */
 #header_top {
     width: 100%;
     position: relative;
     padding: 20px;
     z-index: 10;
 }
+/* ==== Header logo === */
 #header_top .logo{
   display: flex;
   align-items: center;
@@ -84,20 +88,18 @@ ul li{
   border-radius: 50%;
 }
 
-
+/* ==== Navbar Desktop === */
 #nav_top {
     display: flex;
     justify-content: center;
     align-items: center;
 }
-
 #nav_top ul {
     display: flex;
     gap: 30px;
     margin: 0;
     padding: 0;
 }
-
 #nav_top ul li a {
     text-decoration: none;
     font-size: 1.1rem;
@@ -107,13 +109,9 @@ ul li{
     position: relative;
     padding-bottom: 2px;
 }
-
 #nav_top ul li a.active {
     padding-bottom: 2px;
 }
-
-
-
 #nav_top ul li a.active::after,
 #nav_top ul li a:hover::after {
     content: '';
@@ -126,7 +124,6 @@ ul li{
     transition: transform 0.3s ease;
     transform: scaleX(1);
 }
-
 #nav_top ul li a::after {
     content: '';
     position: absolute;
@@ -139,11 +136,8 @@ ul li{
     transform-origin: center;
     transition: transform 0.3s ease;
 }
-
 @media (max-width: 1200px){
-  #header_top{
-    margin-bottom: 0;
-  }
+  #header_top{margin-bottom: 0;}
 }
 @media (max-width: 662px){
   #header_top .logo{
@@ -152,13 +146,13 @@ ul li{
   }
 }
 
+/* ===== Footer ===== */
 .footer{
     width: 100%;
     color: var(--text-color);
     border-top: .5px solid rgba(245, 245, 245, 0.5);
     padding-top: 12px;
 }
-
 .footer_content {
     display: flex;
     flex-direction: column;
@@ -169,28 +163,19 @@ ul li{
     border-bottom: 1px solid rgba(255,255,255,0.1);
     text-align: center;
 }
-
-
+/* Utilizando concatenação de elementos, que foi disponibilizado recentemente no CSS */
 .footer .name_and_job{
-    
-    h2{
-        font-size: 1.5rem;
-    }
-    p{
-        font-size: .9rem;
-    }
+    h2{ font-size: 1.5rem; }
+    p{ font-size: .9rem; }
 }
-
 .footer_menu ul li{
     display: inline-flex;
     padding: 8px;
 }
-
 .footer_menu ul li a {
   color: var(--text-color);
   transition: color 0.25s ease, text-shadow 0.25s ease;
 }
-
 .footer_menu ul li a:hover,
 .footer_menu ul li a:focus {
   color: var(--primary-color);
@@ -201,7 +186,6 @@ ul li{
     0 0 36px var(--primary-color);
   outline: none;
 }
-
 .footer_socials{
     display: inline-flex;
     gap: 8px;
@@ -215,14 +199,12 @@ ul li{
   transform: translateY(-2px) scale(1.03);
   filter: drop-shadow(0 0 12px rgba(247,121,2,0.65));
 }
-
 .footer .copyright {
     margin-top: 22px;
     text-align: center;
 }
 
-/* Effects */
-/* Estilo do glow */
+/* ==== Efeito glow no background, para ser utilizado no JS === */
 .mouse-glow {
   position: fixed;
   top: 0;
@@ -237,15 +219,15 @@ ul li{
   z-index: -1;
 }
 
-/* Responsividade */
+/* ========= Responsividade ========= */
 
-/* Menu mobile */
+/* ==== Menu Mobile (Hamburguer) ==== */
 
+/* ==== Configuração para inserir no elemento aria label === */
 .nav-toggle,
 .mobile-nav, .hamburguer {
   display: none;
 }
-
 .nav-toggle {
   align-items: center;
   justify-content: center;
@@ -260,6 +242,7 @@ ul li{
   z-index: 1100;
 }
 
+/* ==== Icone menu hamburguer === */
 .hamburger {
   position: relative;
   width: 26px;
@@ -269,7 +252,6 @@ ul li{
   display: inline-block;
   transition: background 200ms ease;
 }
-
 .hamburger::before,
 .hamburger::after {
   content: "";
@@ -285,10 +267,8 @@ ul li{
 .hamburger::after  { top: 8px; }
 
 
-
-.nav-toggle.open .hamburger {
-  background: transparent;
-}
+/* ==== Com o menu aberto, esconde a linha do meio e rotaciona as outras formando um X === */
+.nav-toggle.open .hamburger { background: transparent; }
 .nav-toggle.open .hamburger::before {
   transform: translateY(8px) rotate(45deg);
 }
@@ -296,7 +276,7 @@ ul li{
   transform: translateY(-8px) rotate(-45deg);
 }
 
-/* ---------- Mobile menu (dropdown) ---------- */
+/* ==== Container do menu mobile com as listas de links === */
 .mobile-nav {
   display: none;
   position: absolute;
@@ -315,7 +295,6 @@ ul li{
   border-bottom-right-radius: 8px;
   border-bottom: 2px solid var(--darker-color);
 }
-
 .mobile-nav::after{
   content: "";
   position: absolute;
@@ -324,13 +303,11 @@ ul li{
   opacity: .95;
   z-index: -1;
 }
-
 .mobile-nav.open {
   transform: translateY(0) scaleY(1);
   opacity: 1;
   pointer-events: auto;
 }
-
 /* lista vertical com espaçamento touch-friendly */
 .mobile-nav ul {
   list-style: none;
@@ -356,7 +333,6 @@ ul li{
 .mobile-nav.open ul li:nth-child(3){ transition-delay: 0.12s; }
 .mobile-nav.open ul li:nth-child(4){ transition-delay: 0.16s; }
 
-
 .mobile-nav a {
   display: block;
   padding: 12px 16px;
@@ -370,9 +346,7 @@ ul li{
 .mobile-nav a:focus {
   color: var(--primary-color);
 }
-.mobile-nav a.active {
-  color: var(--highlight-color);
-}
+.mobile-nav a.active { color: var(--highlight-color); }
 
 /* ---------- Breakpoint Menu Mobile ---------- */
 @media (max-width: 662px) {
