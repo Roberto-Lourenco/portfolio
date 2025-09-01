@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Portfólio Acadêmico de Roberto Lourenço, projetos e experiências.">
+    <meta name="author" content="Roberto">
+    <title>Portfólio | Roberto Lourenço</title>
+    <link rel="stylesheet" href="assets/css/portfolio.css">
+</head>
+
+<body>
+    <header id="header_top">
+        <div class="logo">
+            <img src="assets/img/avatarperfilgemini.png" alt="">
+            <div class="text-logo">
+                <h3>Roberto Lourenço</h3>
+                <p>Desenvolvedor</p>
+            </div>
+        </div>
+        <!-- Menu desktop -->
+        <nav id="nav_top">
+            <ul>
+                <li><a href="index.html">Sobre mim</a></li>
+                <li><a href="academico.html">Acadêmico</a></li>
+                <li><a href="portfolio.html" class="active">Portfólio</a></li>
+                <li><a href="contato.html">Contato</a></li>
+            </ul>
+        </nav>
+
+        <!-- Botão hamburger -->
+        <button class="nav-toggle" aria-label="Abrir menu" aria-expanded="false" aria-controls="mobile-menu">
+            <span class="hamburger" aria-hidden="true"></span>
+        </button>
+
+        <!-- Menu mobile -->
+        <nav id="mobile-menu" class="mobile-nav" aria-hidden="true">
+            <ul>
+                <li><a href="index.html">Sobre mim</a></li>
+                <li><a href="academico.html">Acadêmico</a></li>
+                <li><a href="portfolio.html" class="active">Portfólio</a></li>
+                <li><a href="contato.html">Contato</a></li>
+            </ul>
+        </nav>
+
+    </header>
+
+    <!-- Glow ao mover o mouse -->
+    <div class="mouse-glow"></div>
+    <!-- --------------------- -->
+
+    <main class="portfolio">
+        <section class="portfolio-section container">
+        <h2>Meus Projetos</h2>
+        <div class="portfolio-grid">
+            <!-- Projeto 1 -->
+            <div class="portfolio-card" data-project="omnis">
+                <img src="assets/img/projects/omnis_preview.png" alt="Preview Projeto Omnis">
+                <div class="portfolio-overlay">
+                    <h3>Projeto Omnis</h3>
+                    <button class="open-modal">Ver mais</button>
+                </div>
+            </div>
+
+            <!-- Mais cards aqui -->
+            <div class="portfolio-card" data-project="feedtoken">
+                <img src="assets/img/projects/fbtk_api_doc1_preview.png" alt="Preview Em Breve">
+                <div class="portfolio-overlay">
+                    <h3>Projeto FeedToken</h3>
+                    <button class="open-modal">Ver mais</button>
+                </div>
+            </div>
+        </div>
+        </section>
+    </main>
+
+    <!-- Modal -->
+    <div id="portfolio-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <div class="modal-body">
+                <h3 id="modal-title"></h3>
+                <p id="modal-desc"></p>
+                <a id="modal-link" href="#" target="_blank" class="modal-btn">Ver Projeto</a>
+                <img id="modal-img" src="" alt="Preview Projeto">
+            </div>
+        </div>
+    </div>
+
+
+
+
+    <footer class="footer">
+        <section class="footer_content">
+            <div class="name_and_job">
+                <h2>Roberto Lourenço</h2>
+                <p>Desenvolvedor de Software</p>
+            </div>
+            <div class="footer_menu">
+                <ul>
+                    <li><a href="index.html">Sobre mim</a></li>
+                    <li><a href="academico.html">Acadêmico</a></li>
+                    <li><a href="portfolio.html">Portfólio</a></li>
+                    <li><a href="contato.html">Contato</a></li>
+                </ul>
+            </div>
+            <div class="footer_socials">
+                <a href=""><img src="assets/img/icons/footer_github.png" alt="Github Logo" width="25px"></a>
+                <a href=""><img src="assets/img/icons/footer_linkedin.png" alt="Linkedin Logo" width="25px"></a>
+            </div>
+        </section>
+        <div class="copyright">
+            <p>© 2025 Desenvolvido por Roberto Lourenço</p>
+        </div>
+    </footer>
+
+    <script src="assets/js/script.js"></script>
+    <script src="assets/js/portfolio.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,193 @@
+@import url(styles.css);
+
+/* Remove efeito azul do navegador ao selecionar/clicar */
+.portfolio-card,
+.portfolio-card:focus,
+.portfolio-card:active,
+.open-modal,
+.open-modal:focus,
+.open-modal:active {
+    outline: none;
+    -webkit-tap-highlight-color: transparent;
+}
+
+/* -------------------------------------------------------------------------- */
+
+.portfolio {
+    padding: 60px 5vw;
+    color: var(--text-color);
+}
+
+.portfolio-section {
+    justify-content: center;
+    flex-direction: column;
+}
+
+.portfolio h2 {
+    font-size: 2.5rem;
+    margin-bottom: 50px;
+    font-weight: 700;
+    text-align: center;
+    background: linear-gradient(90deg, #FF7A18, #ff6600, #319197); /* gradiente chamativo */
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    position: relative;
+}
+
+.portfolio h2::after {
+    content: '';
+    display: block;
+    width: calc(2.5rem*8);
+    height: 4px;
+    background: linear-gradient(90deg, #FF7A18, #e6bb00, #ececec);
+    margin: 10px auto 0;
+    border-radius: 2px;
+    animation: slide 2s infinite alternate;
+}
+
+@keyframes slide {
+    0% { transform: translateX(-20px); }
+    100% { transform: translateX(20px); }
+}
+
+
+.portfolio-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+}
+
+.portfolio-card {
+    position: relative;
+    overflow: hidden;
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    transition: transform .4s ease, box-shadow .4s ease;
+}
+
+.portfolio-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform .6s ease;
+}
+
+.portfolio-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 28px rgba(0, 0, 0, 0.35);
+}
+
+.portfolio-card:hover img {
+    transform: scale(1.1);
+}
+
+.portfolio-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to top, rgba(3, 12, 37, 0.9), rgba(3, 12, 37, 0.2));
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+    padding: 20px;
+    opacity: 0;
+    transition: opacity .4s ease;
+}
+
+.portfolio-card:hover .portfolio-overlay {
+    opacity: 1;
+}
+
+.portfolio-overlay h3 {
+    font-size: 1.3rem;
+    margin-bottom: 10px;
+}
+
+.open-modal {
+    background: var(--highlight-color);
+    color: var(--text-color);
+    padding: 6px 16px;
+    border: none;
+    border-radius: 6px;
+    font-size: 1rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background .3s ease;
+}
+
+.open-modal:hover {
+    background: var(--primary-color);
+}
+
+/* Modal */
+.modal {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.7);
+    backdrop-filter: blur(6px);
+    z-index: 999;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content {
+    background: #111827;
+    border-radius: 12px;
+    padding: 25px;
+    max-width: 1200px;
+    width: 90%;
+    color: var(--text-color);
+    box-shadow: 0 12px 28px rgba(0, 0, 0, 0.4);
+    animation: fadeIn .4s ease;
+    position: relative;
+}
+
+.modal-body {
+    display: flex;
+    flex-direction: column;
+}
+
+#modal-title{ font-size: 1.5rem; }
+#modal-desc{ max-width: 600px; }
+#modal-link{ width: fit-content; }
+
+.modal-body img {
+    width: 100%;
+    border-radius: 8px;
+    margin: 15px 0;
+}
+
+.modal-btn {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 10px 18px;
+    background: var(--highlight-color);
+    color: var(--text-color);
+    border-radius: 6px;
+    font-weight: 500;
+    text-decoration: none;
+    transition: background .3s ease;
+}
+
+.modal-btn:hover {
+    background: var(--primary-color);
+}
+
+.close-modal {
+    position: absolute;
+    top: 12px;
+    right: 18px;
+    font-size: 2rem;
+    cursor: pointer;
+    color: var(--text-color);
+    z-index: 1000;
+}
+
+@media (max-width:1200px){
+    .portfolio-grid{
+        grid-template-columns: 1fr;
+        gap: 25px;
+    }
+}

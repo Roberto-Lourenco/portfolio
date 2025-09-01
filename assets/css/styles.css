@@ -68,7 +68,7 @@ ul li{
     width: 100%;
     position: relative;
     padding: 20px;
-    z-index: 1000;
+    z-index: 10;
 }
 #header_top .logo{
   display: flex;
@@ -303,7 +303,6 @@ ul li{
   left: 0;
   right: 0;
   top: 0;
-
   box-shadow: 0 10px 30px rgba(0,0,0,0.12);
   transform-origin: top center;
   transform: translateY(-6px) scaleY(0.98);
