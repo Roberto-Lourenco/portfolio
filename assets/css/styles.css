@@ -68,9 +68,22 @@ ul li{
     width: 100%;
     position: relative;
     padding: 20px;
-    margin-bottom: 5vh;
     z-index: 1000;
 }
+#header_top .logo{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  margin-bottom: 24px;
+}
+#header_top .logo img{
+  max-width: 60px;
+  width: 100%;
+  border: 3px solid var(--primary-color);
+  border-radius: 50%;
+}
+
 
 #nav_top {
     display: flex;
@@ -127,10 +140,23 @@ ul li{
     transition: transform 0.3s ease;
 }
 
+@media (max-width: 1200px){
+  #header_top{
+    margin-bottom: 0;
+  }
+}
+@media (max-width: 662px){
+  #header_top .logo{
+    justify-content: start;
+    margin-bottom: 0;
+  }
+}
+
 .footer{
-    margin: 120px 0 20px 0;
     width: 100%;
     color: var(--text-color);
+    border-top: .5px solid rgba(245, 245, 245, 0.5);
+    padding-top: 12px;
 }
 
 .footer_content {
@@ -212,6 +238,7 @@ ul li{
 }
 
 /* Responsividade */
+
 /* Menu mobile */
 
 .nav-toggle,
@@ -295,7 +322,7 @@ ul li{
   position: absolute;
   top: 0; left: 0; right: 0; bottom: 0;
   background: var(--bg-color);
-  filter: blur(50px);
+  opacity: .95;
   z-index: -1;
 }
 
@@ -317,7 +344,7 @@ ul li{
   opacity: 0;
   transition: transform 270ms ease, opacity 220ms ease;
   transition-delay: 0ms;
-  border-bottom: 1px solid #ff5f1f23;
+  border-bottom: .5px solid #ff5f1f49;
 }
 
 /* quando o menu abre, anima cada item sequencialmente */

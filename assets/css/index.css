@@ -9,7 +9,7 @@
     min-height: fit-content;
     letter-spacing: 1px;
     position: relative;
-    padding-top: 10vh;
+    padding-top: 15vh;
 }
 .home-hero::before {
     content: "";

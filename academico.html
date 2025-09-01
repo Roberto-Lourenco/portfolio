@@ -12,6 +12,13 @@
 
 <body>
     <header id="header_top">
+        <div class="logo">
+            <img src="assets/img/avatarperfilgemini.png" alt="" >
+            <div class="text-logo">
+                <h3>Roberto Lourenço</h3>
+                <p>Desenvolvedor</p>
+            </div>
+        </div>
         <!-- Menu desktop -->
         <nav id="nav_top">
             <ul>
@@ -42,50 +49,104 @@
     <!-- Glow ao mover o mouse -->
     <div class="mouse-glow"></div>
     <!-- --------------------- -->
-    <main class="academic-section container">
-
-        <!-- Menu interno -->
-        <nav class="academic-menu">
-            <ul>
-                <li><a href="#formacao" class="active">Formação</a></li>
-                <li><a href="#cursos">Cursos Livres</a></li>
-            </ul>
-        </nav>
-
-        <!-- Conteúdo -->
-        <section id="formacao" class="academic-content active">
-            <h2>Formação</h2>
-            <article class="academic-item">
-                <h3>Bacharelado em Engenharia de Software</h3>
-                <p><strong>Centro Universitário Uninter</strong> – 2025 a 2027</p>
-                <p>Transferência Externa</p>
-            </article>
-            <article class="academic-item">
-                <h3>Bacharelado em Engenharia de Software</h3>
-                <p><strong>Universidade Estácio de Sá</strong> – 2022 a 2025</p>
-                <p>Trancado</p>
-            </article>
-            <article class="academic-item">
-                <h3>AWS re/Start</h3>
-                <p><strong>Senac RJ + Amazon Web Services</strong> – 2025 a 2026</p>
-                <p>Curso intensivo de computação em nuvem, redes e fundamentos de DevOps.</p>
+    <main class="resume-hero">
+        <section class="resume-content container">
+            <div class="resume-img">
+                <picture>
+                    <img src="assets/img/graduate.png" alt="Vetor ilustração de um menino em cima de 7 livros.">
+                </picture>
+            </div>
+            <article class="resume-text">
+                <picture class="floating-graduate-cap">
+                    <img src="assets/img/graduate_cap.png" alt="Chapéu de graduando com livros em baixo">
+                </picture>
+                <h1>Resumo acadêmico</h1>
+                <p>
+                    Estou construindo minha jornada acadêmica na área de <strong>Engenharia de Software</strong> e
+                    complementando com formações práticas em <strong>cloud computing</strong>, <strong>arquitetura de
+                        sistemas</strong>
+                    e <strong>desenvolvimento orientado a boas práticas</strong>.
+                    Meu foco é unir teoria e prática para desenvolver soluções escaláveis, seguras e de alta
+                    performance,
+                    sempre buscando aprender e aplicar novas tecnologias.
+                </p>
             </article>
         </section>
+    </main>
+    <main class="academic">
+        <section class="academic-section container">
 
-        <section id="cursos" class="academic-content">
-            <h2>Cursos Livres</h2>
-            <article class="academic-item">
-                <h3>C# Avançado</h3>
-                <p><strong>Alura</strong> – 2025</p>
-                <p>Foco em performance, paralelismo e arquitetura limpa com DDD.</p>
-            </article>
-            <article class="academic-item">
-                <h3>Python para Data Science</h3>
-                <p><strong>Coursera</strong> – 2024</p>
-                <p>Introdução a análise de dados, pandas, numpy e machine learning.</p>
-            </article>
+            <!-- Menu interno -->
+            <nav class="academic-menu">
+                <ul>
+                    <li><a href="#degree" class="active">Formação</a></li>
+                    <li><a href="#courses">Cursos</a></li>
+                    <li><a href="#languages">Idiomas</a></li>
+                </ul>
+            </nav>
+
+            <!-- Conteúdo -->
+            <section id="degree" class="academic-content active">
+                <h2>Formação</h2>
+                <article class="academic-item">
+                    <h3>Bacharelado em Engenharia de Software</h3>
+                    <p><strong>Centro Universitário Uninter</strong> – 2025 a 2027</p>
+                    <p>Transferência Externa</p>
+                </article>
+                <article class="academic-item">
+                    <h3>Bacharelado em Engenharia de Software</h3>
+                    <p><strong>Universidade Estácio de Sá</strong> – 2022 a 2025</p>
+                    <p>Trancado</p>
+                </article>
+                <article class="academic-item">
+                    <h3>AWS re/Start</h3>
+                    <p><strong>Senac RJ + Amazon Web Services</strong> – 2025 a 2026</p>
+                    <p>Curso intensivo de computação em nuvem, redes e fundamentos de DevOps.</p>
+                </article>
+            </section>
+
+            <section id="courses" class="academic-content">
+                <h2>Cursos</h2>
+                <article class="academic-item">
+                    <h3>Javascript Avançado</h3>
+                    <p><strong>B7Web</strong></p>
+                    <p>Verificação emitida em jun de 2025</p>
+                    <p><a href="#" class="courses-credential">Exibir credencial</a></p>
+                </article>
+
+                <article class="academic-item">
+                    <h3>Programação em Python</h3>
+                    <p><strong>Senac RJ</strong></p>
+                    <p>Verificação emitida em mai de 2025</p>
+                    <p><a href="#" class="courses-credential">Exibir credencial</a></p>
+                </article>
+
+                <article class="academic-item">
+                    <h3>Projeto Crypto</h3>
+                    <p><strong>Senac RJ</strong></p>
+                    <p>Verificação emitida em mai de 2025</p>
+                    <p><a href="#" class="courses-credential">Exibir credencial</a></p>
+                </article>
+
+                <article class="academic-item">
+                    <h3>Programação Fullstack Java com Spring Boot</h3>
+                    <p><strong>Senac RJ</strong></p>
+                    <p>Verificação emitida em out de 2024</p>
+                    <p><a href="#" class="courses-credential">Exibir credencial</a></p>
+                </article>
+            </section>
+
+            <section id="languages" class="academic-content">
+                <h2>Inglês</h2>
+                <article class="academic-item">
+                    <h3>EF SET English Certificate (C2)</h3>
+                    <p><strong>EF SET</strong></p>
+                    <p>Verificação emitida em jun de 2025</p>
+                    <p><a href="#" class="courses-credential">Exibir credencial</a></p>
+                </article>
+            </section>
+
         </section>
-
     </main>
 
 
