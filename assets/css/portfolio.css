@@ -38,7 +38,7 @@ Sumário
     margin-bottom: 50px;
     font-weight: 700;
     text-align: center;
-    background: linear-gradient(90deg, #FF7A18, #ff6600, #319197); /* gradiente chamativo */
+    background: linear-gradient(90deg, #FF7A18, #ff6600, #319197);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     position: relative;
@@ -46,16 +46,18 @@ Sumário
 .portfolio h2::after {
     content: '';
     display: block;
-    width: calc(2.5rem*8);
+    width: 200px;
     height: 4px;
     background: linear-gradient(90deg, #FF7A18, #e6bb00, #ececec);
     margin: 10px auto 0;
     border-radius: 2px;
-    animation: slide 2s infinite alternate;
+    transform: translateX(-20px);
+    animation: slide 4s infinite alternate;
+    transition: ease-in-out;
 }
 @keyframes slide {
-    0% { transform: translateX(-20px); }
-    100% { transform: translateX(20px); }
+    0% { transform: translateX(20px); }
+    100% { transform: translateX(-20px); }
 }
 
 /* === Cards dos portfólios ====*/

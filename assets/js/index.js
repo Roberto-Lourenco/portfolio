@@ -8,7 +8,7 @@
  */
 
 const dynamicText = document.querySelector(".span_typing")
-const words = ["Desenvolvedor de Software", "Engenheiro de Software", "Desenvolvedor Backend", "Apaixonado por Inovação", "Futuro Arquiteto de Software"]
+const words = ["Desenvolvedor Fullstack", "Desenvolvedor Backend"]
 
 let wordIndex = 0;
 let charIndex = 0;

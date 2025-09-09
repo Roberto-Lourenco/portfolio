@@ -135,6 +135,7 @@ Sumário
     display: flex;
     flex-direction: column;
     gap: 12px;
+    margin-bottom: 24px;
 }
 
 .qta_call_to_connect span {
@@ -176,6 +177,59 @@ Sumário
     background-color: var(--primary-color);
     cursor: pointer;
     transition: transform 0.25s ease, filter 0.25s ease, box-shadow 0.25s ease;
+}
+
+/* ======= Hard Skills Logos ======= */
+
+.skills_logos{
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin: 24px 0;
+}
+.skills_logos span {
+    font-size: 1.4rem;
+    background-color: var(--highlight-color);
+    width: fit-content;
+    padding: 6px 12px;
+    font-weight: 600;
+    border-radius: 12px;
+    color: var(--text-color);
+    user-select: none;
+}
+
+.skills_list {
+    display: flex;
+    width: 100%;
+    gap: 12px;
+    padding-left: 8px;
+    cursor: pointer;
+
+}
+.skills_list li {
+    position: relative;
+    display: inline-block;
+}
+
+.skills_list li::after {
+    content: attr(data-tooltip);
+    position: absolute;
+    bottom: 110%;
+    width: fit-content;
+    left: 32px;
+    transform: translateX(-50%);
+    background: var(--primary-color);
+    color: #fff;
+    padding: 6px 10px;
+    border-radius: 6px;
+    white-space: nowrap;
+    font-size: 0.85rem;
+    opacity: 0;
+    pointer-events: none;
+}
+
+.skills_list li:hover::after {
+    opacity: 1;
 }
 
 /* === Efeito escrita automática ====*/

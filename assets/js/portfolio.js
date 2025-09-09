@@ -10,14 +10,17 @@
 const projects = {
     omnis: {
         title: "Projeto Omnis",
-        desc: "Website de seguros desenvolvido em Django, com cotação de seguros automática e organizado em módulos seguindo boas práticas de desenvolvimento.",
+        desc: "Projeto pessoal de um website de seguros com cotação rápida que calcula o preço da mensalidade com base nos dados informados, e organizado em módulos MVT."+
+        "<br><strong>Tecnologias utilizadas</strong>: Django",
         img: "assets/img/projects/omnis_preview.png",
         link: "https://github.com/Roberto-Lourenco/django_projeto_omnis"
     },
     feedtoken: {
-        title: "FeedToken Backend v1.0-beta",
+        title: "Projeto Acadêmico: FeedToken",
         img: "assets/img/projects/fbtk_api_doc1_preview.png",
-        desc: "Primeira versão estável da API backend do FeedToken, liderada por mim. Desenvolvemos mais de 40 endpoints, com integração de token blockchain, autenticação JWT e testes unitários.",
+        desc: "Participei do desenvolvimento da API backend do FeedToken, uma plataforma B2B2C com recompensa de tokens a usuarios que completarem missões."+
+        "<br>Desenvolvemos mais de 30 endpoints, com integração de token blockchain, autenticação JWT e testes unitários."+
+        "<br><strong>Tecnologias utilizadas</strong>: Django, React e Solid.",
         link: "https://github.com/TransferoNovaIguacu/feedback-company-backend"
     },
 
@@ -36,7 +39,7 @@ document.querySelectorAll(".portfolio-card").forEach(card => {
         const project = projects[projectKey];
 
         modalTitle.textContent = project.title;
-        modalDesc.textContent = project.desc;
+        modalDesc.innerHTML = project.desc;
         modalImg.src = project.img;
         modalLink.href = project.link;
 
